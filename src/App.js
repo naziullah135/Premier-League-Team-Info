@@ -1,21 +1,16 @@
 import Home from "./components/Home/Home";
 import NotMatch from "./components/NotMatch/NotMatch";
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Team from "./components/Team/Team";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import TeamDetails from "./components/TeamDetails/TeamDetails";
 
 function App() {
   return (
-    <Router>
+        <Router>
       <Switch>
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/team">
-          <Team />
-        </Route>
-        <Route path="/teamdetails">
+        <Route path="/teamdetails/:teamId">
           <TeamDetails />
         </Route>
         <Route exact path="/">
