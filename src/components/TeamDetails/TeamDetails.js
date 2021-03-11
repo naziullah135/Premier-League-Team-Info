@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./TeamDetails.css";
 import MalePic from "../../images/Rectangle 28.png";
-import FemalePic from"../../images/female.png"
+import FemalePic from "../../images/female.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -16,7 +16,7 @@ import {
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const TeamDetails = (props) => {
+const TeamDetails = () => {
   const { teamId } = useParams();
   const [details, setDetails] = useState([]);
   // const {strTeam} = props.details;
@@ -54,11 +54,19 @@ const TeamDetails = (props) => {
             </div>
           </div>
           <div className="col-md-5">
-            {
-                details.strGender === "Male" ? (<img style={{ width: "100%", padding: "20px" }}
-                    src={MalePic} alt="..."/>)
-                    :(<img style={{ width: "100%", padding: "20px" }} src={FemalePic} alt="..."  />)     
-            }
+            {details.strGender === "Male" ? (
+              <img
+                style={{ width: "100%", padding: "20px" }}
+                src={MalePic}
+                alt="..."
+              />
+            ) : (
+              <img
+                style={{ width: "100%", padding: "20px" }}
+                src={FemalePic}
+                alt="..."
+              />
+            )}
           </div>
         </div>
       </div>
