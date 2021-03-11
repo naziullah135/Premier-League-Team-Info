@@ -4,7 +4,6 @@ import "./TeamDetails.css";
 import MalePic from "../../images/Rectangle 28.png";
 import FemalePic from"../../images/female.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebook,
   faTwitter,
